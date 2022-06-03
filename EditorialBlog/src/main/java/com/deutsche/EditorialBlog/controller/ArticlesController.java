@@ -82,6 +82,14 @@ public class ArticlesController {
 		
 	}
 	
+	@PostMapping("declinedApproval")
+	public ResponseEntity<String>declinedApproval(@RequestBody ArticleReviewModel articleReviewModel){
+		
+		articleReviewRepository.delete(articleReviewDAO.deleteReviewedArticle(articleReviewModel.getArticleid(), articleReviewModel.getTitle()));
+		
+		return ResponseEntity.ok(articleReviewModel.getTitle() + " not approved.");
+	}
+	
 }
 
 
