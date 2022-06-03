@@ -1,0 +1,64 @@
+create database EditorialBlog;
+use EditorialBlog;
+
+create table Users(
+	id integer primary key AUTO_INCREMENT,
+    name varchar(30),
+    email varchar(30),
+    typeofacc integer,
+    question varchar(50),
+    answer varchar(15),
+    password varchar(15)
+);
+
+create table allArticles(
+	id INTEGER primary key AUTO_INCREMENT,
+	authorname varchar(30),
+    articleid integer,
+    title varchar(30),
+    content longtext
+);
+
+create table articlesunderreview(
+	id INTEGER primary key AUTO_INCREMENT,
+	authorname varchar(30),
+    articleid integer,
+    title varchar(30),
+    content longtext
+);
+
+
+
+insert into allArticles values (
+'Prakalp' , 1, 'lorem Ipusm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere sagittis eros, vel mollis tellus dignissim in. Maecenas vehicula massa nisi, ac rhoncus ipsum pulvinar et. Vivamus varius metus arcu, ac condimentum arcu placerat semper. Cras scelerisque vel ipsum quis pulvinar. Pellentesque cursus ex metus, a lacinia est bibendum ac. Ut risus nunc, consectetur vitae rutrum eu, facilisis et neque. Vivamus id euismod dui. Vestibulum tempor rhoncus enim, et faucibus purus consectetur laoreet. Nunc elementum tortor in mauris tincidunt dignissim. Sed ac dolor sit amet nibh posuere viverra. Duis porttitor risus sapien, dapibus sollicitudin nisl vestibulum in. Cras cursus condimentum urna nec maximus. Fusce vel tempus ex. Ut non suscipit mi. Vestibulum facilisis molestie metus, et euismod ligula volutpat ut.auris bibendum quis leo a auctor. Nullam id quam tellus. Morbi massa lectus, ultricies a ligula cursus, iaculis consectetur leo. In facilisis ex sed urna consequat vulputate. Vestibulum et nibh quam. Donec a odio a erat hendrerit auctor. Cras in rhoncus metus. Suspendisse potenti. Phasellus leo sem, luctus ut dapibus sit amet, venenatis quis velit. Suspendisse eu erat mauris. Nulla blandit aliquet pharetra. In efficitur nisi nisi, vitae luctus nulla ultrices ut.
+Sed at nisi id augue tempor eleifend a non est. Cras aliquet arcu lacus, semper vulputate mi posuere vel. Nam maximus leo leo, at tempor neque interdum ac. Praesent eros leo, sagittis et vulputate a, eleifend vitae mauris. Vivamus at maximus turpis, non eleifend nunc. Fusce aliquet fringilla posuere. Etiam vestibulum vehicula tellus, in tincidunt nunc semper eu. Duis lobortis venenatis odio, et vestibulum neque. Nunc et hendrerit tortor, ut porta lorem. Nullam congue, orci sit amet elementum lobortis, tortor justo aliquam metus, ac gravida arcu eros feugiat velit. Nunc rutrum metus non nisl finibus lobortis sed nec turpis. Nulla purus purus, consequat et vehicula sit amet, vehicula sit amet turpis.Aenean faucibus fringilla mi, feugiat maximus lectus scelerisque sed. Vestibulum quis augue sed dui condimentum venenatis. Etiam pretium in purus vel dapibus. Phasellus commodo viverra metus id aliquet. Duis sodales purus id turpis iaculis posuere. Phasellus quis enim vitae justo mattis accumsan. Nullam lectus erat, ullamcorper eu elementum in, vehicula in nulla. Etiam vel nulla pretium, tempus est interdum, ultrices lectus. Vivamus rutrum tempus risus, pellentesque maximus nisi accumsan quis. Curabitur vitae tellus in sapien viverra dictum. Praesent dolor erat, ullamcorper non gravida sed, imperdiet vitae erat. Cras fermentum, justo in mattis laoreet, enim urna lacinia felis, nec fringilla mauris quam in nisl. Nunc in lectus at lacus aliquet elementum. Vestibulum facilisis tempus arcu sed euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Proin vel condimentum mauris. Morbi gravida varius eros, nec sagittis turpis dapibus tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc nec purus sed massa interdum aliquam nec ac massa. Vivamus ornare enim nec placerat lobortis. Sed elementum eu odio quis varius. In ultrices tempus ex eu accumsan. Proin non lorem eget enim posuere volutpat. Maecenas ullamcorper tortor ac nisi pharetra, ut gravida mauris eleifend. Vivamus consequat justo arcu, a venenatis massa pellentesque in. Fusce nec lobortis metus. Pellentesque porta mauris eget velit vestibulum, ut vulputate lectus bibendum. Curabitur mauris tellus, facilisis a lacus eu, tincidunt molestie nibh.Praesent dui dui, dapibus eu libero non, interdum tincidunt sapien. Pellentesque nec congue mauris. Nulla quis velit egestas, gravida nibh vel, fermentum metus. Nullam ornare id mauris id volutpat. Curabitur placerat sem non diam finibus lacinia. Quisque nec nunc rhoncus, tincidunt orci vel, dapibus risus. In pulvinar ligula id nulla suscipit, ac pharetra lacus placerat. Donec egestas eu purus id convallis. Nam condimentum urna lacus, vel ullamcorper tortor ultricies rhoncus. Vestibulum augue quam, faucibus id metus id, mollis molestie tellus. Nunc ac placerat augue, in luctus nibh. Etiam dapibus libero eu mattis pulvinar. Integer nec molestie massa. Morbi sit amet risus purus. Aenean suscipit augue ac erat mollis dignissim. Suspendisse et nulla vel metus dapibus efficitur ut vitae urna. Ut pellentesque metus dui, vel suscipit orci pulvinar ac. Vestibulum sagittis urna fringilla ante cursus semper. Praesent eu porta augue. Curabitur et orci augue. Maecenas sodales risus urna, vitae finibus lacus scelerisque sit amet. Suspendisse ac venenatis sem. Curabitur quis augue nulla. Integer interdum urna neque, dapibus congue massa congue ullamcorper. Phasellus arcu eros, rhoncus quis sapien ac, interdum sodales orci. Cras ut porttitor leo.' , 1);
+
+
+insert into allArticles values (
+'Prakalp Jain' , 2, 'Lorem Dolor', 'Curabitur non felis est. Vestibulum lacinia rhoncus mi, sit amet pretium libero viverra ac. Pellentesque interdum lorem dapibus lobortis ultrices. Mauris dignissim nec libero non varius. Morbi eget metus est. Quisque ut tincidunt neque. Curabitur pretium, tortor ac finibus feugiat, nulla augue sodales eros, in posuere nibh mauris et felis. Integer dictum semper nibh et suscipit. Mauris justo sem, ullamcorper mattis accumsan ac, mollis id mi. Sed ut accumsan erat. In sed interdum velit. In pharetra, velit non luctus interdum, orci felis cursus justo, sed varius dui eros vel nulla.
+Cras efficitur est ligula, eget tempor tortor facilisis ut. Pellentesque ultricies semper orci, et pretium arcu egestas eu. Morbi sollicitudin elementum dictum. Suspendisse dapibus purus nisi, vitae vestibulum justo interdum at. Phasellus lobortis elit purus, nec lobortis elit luctus sit amet. Proin elementum velit sit amet lectus lacinia vehicula. Etiam dictum metus id quam ultricies scelerisque. Vivamus pharetra dui arcu, vel sollicitudin purus lacinia venenatis.Cras id urna sit amet purus pulvinar imperdiet sed ac libero. Integer eu purus posuere, fermentum nisi sit amet, feugiat urna. Morbi volutpat, felis et dapibus dictum, felis justo eleifend augue, sed congue velit tellus eu est. Curabitur lacus turpis, scelerisque sed odio et, gravida aliquet ex. In et lacus tortor. Mauris suscipit a sapien eget vehicula. Mauris in diam odio. Maecenas scelerisque blandit dolor posuere fermentum. Pellentesque vitae ante consequat, scelerisque urna eu, faucibus nisl. Sed ornare quam eu nisl lobortis, ac scelerisque tellus vestibulum. Aliquam consequat ligula vel tortor lobortis, et ultrices felis convallis. Nulla egestas aliquam massa, nec convallis magna sagittis eget. In eget consequat nulla. Mauris blandit lorem a aliquet laoreet.' , 1,2);
+alter table allArticles ADD COLUMN id INTEGER primary key AUTO_INCREMENT;
+alter table allArticles drop COLUMN latestversion;
+drop table Users;
+
+select * from Users;
+
+desc users;
+desc allArticles;
+
+
+
+
+
+
+drop table articlesunderreview;
+
+
+select * from allArticles;
+select * from articlesunderreview;
+desc articlesunderreview;
+
+delete from allArticles where id=8;
+
+delete from articlesunderreview where id=1;
